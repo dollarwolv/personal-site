@@ -1,15 +1,101 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const switzer = localFont({
+  src: [
+    {
+      path: "../public/fonts/Switzer-Thin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-ThinItalic.otf",
+      weight: "100",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Extralight.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-ExtralightItalic.otf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-LightItalic.otf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-MediumItalic.otf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Semibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-SemiboldItalic.otf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-BoldItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Extrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-ExtraboldItalic.otf",
+      weight: "800",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Switzer-Black.otf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Switzer-BlackItalic.otf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,10 +109,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${switzer.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
