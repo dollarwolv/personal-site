@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="mt-12">
-      <div className="flex flex-col items-start gap-4 mx-auto max-w-160 w-fit text-3xl">
-        <div className="flex flex-row items-end gap-2 ">
+      <div className="mx-auto flex w-fit max-w-160 flex-col items-start gap-4 text-3xl">
+        <div className="flex flex-row items-end gap-2">
           <p className="">Justin</p>
           <Image
             src={"/img/avatar-4by5.png"}
