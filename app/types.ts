@@ -6,9 +6,16 @@ export type ProjectColumn =
   | { title: "Languages"; text: string }
   | { title: "Frameworks"; text: string };
 
+export type ProjectImg = {
+  url: string;
+  alt: string;
+  layout?: "full" | "half";
+};
+
 export type ProjectItem = {
   time: string;
   title: string;
   description: string;
   columns: ProjectColumn[];
+  images: ProjectImg[];
 };

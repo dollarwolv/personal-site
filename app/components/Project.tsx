@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Project({ project }: { project: ProjectItem }) {
   return (
-    <div className="mb-24">
+    <div className="mb-24 w-full">
       <div className="mx-auto max-w-160">
         <div className="flex flex-col">
           <span className="text-stone-700">{project.time}</span>
@@ -62,27 +62,21 @@ function Project({ project }: { project: ProjectItem }) {
           );
         })}
       </div>
-      <div className="flex flex-col">
-        <Image
-          src="/img/zhonglensdemo.jpg"
-          alt="schwanz"
-          width={2000}
-          height={2000}
-        />
-        <div className="flex flex-row">
-          <Image
-            src="/img/xiaowanzi.jpg"
-            alt="xiao wanzi"
-            width={640}
-            height={640}
-          />
-          <Image
-            src="/img/website.jpg"
-            alt="website"
-            width={640}
-            height={640}
-          />
-        </div>
+      <div className="grid grid-cols-2">
+        {project.images.map((image) => (
+          <div
+            key={image.url}
+            className={image.layout === "full" ? "col-span-2" : "col-span-1"}
+          >
+            <Image
+              src={image.url}
+              alt={image.alt}
+              width={1600}
+              height={900}
+              className="w-full object-cover"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

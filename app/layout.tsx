@@ -109,7 +109,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${switzer.className} h-full px-20 antialiased`}>
+    <html lang="en" className={`${switzer.className} h-full px-16 antialiased`}>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

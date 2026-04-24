@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import { ProjectItem } from "./types";
 import Project from "./components/Project";
 
@@ -40,6 +39,23 @@ const projects: ProjectItem[] = [
         ],
       },
     ],
+    images: [
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/zhonglens/xiaowanzi.jpg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "full",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/zhonglens/overlay.jpeg",
+        alt: "Another example of using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "half",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/zhonglens/website.jpeg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "half",
+      },
+    ],
   },
   {
     time: "January 2026",
@@ -49,6 +65,10 @@ const projects: ProjectItem[] = [
     and subtle animations to give the project a polished and professional presence.
     `,
     columns: [
+      {
+        title: "Link",
+        text: "https://denieuwemensa.nl/",
+      },
       {
         title: "Geo",
         text: "Hong Kong",
@@ -74,6 +94,38 @@ const projects: ProjectItem[] = [
         ],
       },
     ],
+    images: [
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/de-nieuwe-mensa/hero.jpg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "full",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/de-nieuwe-mensa/cards_large.jpeg",
+        alt: "Another example of using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "half",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/de-nieuwe-mensa/values_large.jpeg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "half",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/de-nieuwe-mensa/about.jpg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "full",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/de-nieuwe-mensa/feedback_large.jpeg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "half",
+      },
+      {
+        url: "https://geopgwvgdkgn4bjx.public.blob.vercel-storage.com/de-nieuwe-mensa/rating_large.jpeg",
+        alt: "Using ZhongLens on a YouTube video to look up subtitles instantly.",
+        layout: "half",
+      },
+    ],
   },
 ];
 
@@ -93,9 +145,9 @@ export default function Home() {
           <p className="">Dotzlaw</p>
         </div>
         <h2 className="">
-          Web developer and AI Master's student with a background in psychology.
-          I’ve co-founded and worked in early-stage startups across growth,
-          product, and engineering, shipping projects end to end.{" "}
+          Web developer and AI Master&apos;s student with a background in
+          psychology. I’ve co-founded and worked in early-stage startups across
+          growth, product, and engineering, shipping projects end to end.{" "}
           <span className="text-stone-500">
             Currently building web applications and working with businesses to
             create software that solves real problems.
