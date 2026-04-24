@@ -118,8 +118,10 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="mx-auto flex w-full max-w-160 flex-col items-start">
-        <h2 className="mb-8 text-2xl text-stone-500">Recent Projects</h2>
+      <section className="mx-auto flex w-full flex-col items-start">
+        <h2 className="mx-auto mb-8 w-full max-w-160 text-2xl text-stone-500">
+          Recent Projects
+        </h2>
         {projects.map((item, itemIndex) => (
           <Project project={item} key={itemIndex} />
         ))}
