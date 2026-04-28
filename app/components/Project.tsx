@@ -62,11 +62,13 @@ function Project({ project }: { project: ProjectItem }) {
           );
         })}
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         {project.images.map((image) => (
           <div
             key={image.url}
-            className={image.layout === "full" ? "col-span-2" : "col-span-1"}
+            className={
+              image.layout === "full" ? "md:col-span-2" : "md:col-span-1"
+            }
           >
             <Image
               src={image.url}

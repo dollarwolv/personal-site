@@ -4,6 +4,8 @@ export type ProjectColumn =
   | { title: "Geo"; text: string }
   | { title: "Status"; text: string }
   | { title: "Languages"; text: string }
+  | { title: "Focus"; text: string }
+  | { title: "Tools"; text: string }
   | { title: "Frameworks"; text: string };
 
 export type ProjectImg = {

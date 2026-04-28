@@ -5,7 +5,7 @@ import { projects } from "./data/content";
 
 export default function Home() {
   return (
-    <div className="relative px-16">
+    <div className="relative px-8 md:px-16">
       <HeroMask />
       <div className="flex flex-col p-2">
         <section className="mx-auto flex w-fit max-w-160 flex-col items-start gap-4 py-16 text-3xl leading-tight">

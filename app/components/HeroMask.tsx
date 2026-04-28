@@ -9,11 +9,11 @@ function HeroMask() {
   const { x: mouseX, y: mouseY } = useMousePosition();
   const [isHovered, setIsHovered] = useState(false);
 
-  const size = isHovered ? 620 : 20;
+  const size = isHovered ? 620 : 15;
 
   return (
     <motion.div
-      className="mask pointer-events-none absolute inset-0 z-10 flex h-full flex-col p-2"
+      className="mask pointer-events-none absolute inset-0 z-10 flex h-full flex-col p-2 px-8 max-md:invisible md:px-16"
       animate={{
         maskPosition: `${mouseX - size / 2}px ${mouseY - size / 2}px`,
         maskSize: `${size}px`,
@@ -24,7 +24,7 @@ function HeroMask() {
         <div className="flex flex-row items-end gap-2">
           <p className="text-white">Justin</p>
           <Image
-            src={"/img/waving-4by5.png"}
+            src={"/img/waving-sitting-4by5.png"}
             width={120}
             height={150}
             alt="Justin Dotzlaw"
