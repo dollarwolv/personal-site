@@ -42,12 +42,12 @@ function HeroMask({
           />
           <p className="text-white">Dotzlaw</p>
         </div>
-        <h2 className="pointer-events-auto">
-          <span
-            className="text-white"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+        <h2
+          className="pointer-events-auto"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <span className="text-white">
             I&apos;m curious by nature and enjoy learning across different
             areas, especially where psychology and technology overlap. Outside
             of work, I like learning languages, traveling, hiking, and exploring
