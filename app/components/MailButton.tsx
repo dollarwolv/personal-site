@@ -52,7 +52,7 @@ function MailButton({
         <div className="flex gap-1">
           <span>
             {copied || mailButtonCopied
-              ? "Copied to clipboard!"
+              ? "Copied to clipboard - talk to you soon! :)"
               : "justindotzlaw@gmail.com"}
           </span>
           {(!copied || !mailButtonCopied) && (
