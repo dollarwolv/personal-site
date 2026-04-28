@@ -3,13 +3,23 @@
 import Image from "next/image";
 import useMousePosition from "../utils/useMousePosition";
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
+import MailButton from "./MailButton";
 
-function HeroMask() {
+function HeroMask({
+  mailButtonHovered,
+  setMailButtonHovered,
+  mailButtonCopied,
+  setMailButtonCopied,
+}: {
+  mailButtonHovered: boolean;
+  setMailButtonHovered: Dispatch<SetStateAction<boolean>>;
+  mailButtonCopied: boolean;
+  setMailButtonCopied: Dispatch<SetStateAction<boolean>>;
+}) {
   const { x: mouseX, y: mouseY } = useMousePosition();
   const [isHovered, setIsHovered] = useState(false);
-
-  const size = isHovered ? 620 : 15;
+  const size = isHovered ? 620 : 8;
 
   return (
     <motion.div
@@ -48,6 +58,27 @@ function HeroMask() {
             </span>
           </span>
         </h2>
+        <div className="flex flex-row gap-2 text-sm">
+          <a
+            href="https://www.linkedin.com/in/justindotzlaw/"
+            className="text-black"
+          >
+            <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-[#ec4e39] hover:text-white">
+              LinkedIn
+            </button>
+          </a>
+          <a href="https://github.com/dollarwolv" className="text-black">
+            <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-[#ec4e39] hover:text-white">
+              GitHub
+            </button>
+          </a>
+          <MailButton
+            mailButtonHovered={mailButtonHovered}
+            setMailButtonHovered={setMailButtonHovered}
+            mailButtonCopied={mailButtonCopied}
+            setMailButtonCopied={setMailButtonCopied}
+          />
+        </div>
       </section>
     </motion.div>
   );

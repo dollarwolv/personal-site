@@ -1,12 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Project from "./components/Project";
 import HeroMask from "./components/HeroMask";
 import { projects } from "./data/content";
+import MailButton from "./components/MailButton";
+import { useState } from "react";
 
 export default function Home() {
+  const [mailButtonHovered, setMailButtonHovered] = useState(false);
+  const [mailButtonCopied, setMailButtonCopied] = useState(false);
+
   return (
     <div className="relative px-8 md:px-16">
-      <HeroMask />
+      <HeroMask
+        setMailButtonHovered={setMailButtonHovered}
+        mailButtonHovered={mailButtonHovered}
+        mailButtonCopied={mailButtonCopied}
+        setMailButtonCopied={setMailButtonCopied}
+      />
       <div className="flex flex-col p-2">
         <section className="mx-auto flex w-fit max-w-160 flex-col items-start gap-4 py-16 text-3xl leading-tight">
           <div className="flex flex-row items-end gap-2">
@@ -37,20 +49,21 @@ export default function Home() {
               href="https://www.linkedin.com/in/justindotzlaw/"
               className="text-black"
             >
-              <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-black hover:text-white">
+              <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-[#ec4e39] hover:text-white">
                 LinkedIn
               </button>
             </a>
             <a href="https://github.com/dollarwolv" className="text-black">
-              <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-black hover:text-white">
+              <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-[#ec4e39] hover:text-white">
                 GitHub
               </button>
             </a>
-            <a href="mailto:justindotzlaw@gmail.com">
-              <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-black hover:text-white">
-                Mail
-              </button>
-            </a>
+            <MailButton
+              mailButtonHovered={mailButtonHovered}
+              setMailButtonHovered={setMailButtonHovered}
+              mailButtonCopied={mailButtonCopied}
+              setMailButtonCopied={setMailButtonCopied}
+            />
           </div>
         </section>
         <section className="mx-auto flex w-full flex-col items-start">
