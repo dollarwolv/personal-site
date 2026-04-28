@@ -58,12 +58,22 @@ export default function Home() {
                 GitHub
               </button>
             </a>
-            <MailButton
-              mailButtonHovered={mailButtonHovered}
-              setMailButtonHovered={setMailButtonHovered}
-              mailButtonCopied={mailButtonCopied}
-              setMailButtonCopied={setMailButtonCopied}
-            />
+            <div className="max-md:hidden">
+              <MailButton
+                mailButtonHovered={mailButtonHovered}
+                setMailButtonHovered={setMailButtonHovered}
+                mailButtonCopied={mailButtonCopied}
+                setMailButtonCopied={setMailButtonCopied}
+              />
+            </div>
+            <a
+              href="mailto:justindotzlaw@gmail.com"
+              className="text-black md:hidden"
+            >
+              <button className="cursor-pointer rounded-xl bg-stone-100 px-4 py-2 text-black transition-colors duration-300 hover:bg-[#ec4e39] hover:text-white">
+                Mail
+              </button>
+            </a>
           </div>
         </section>
         <section className="mx-auto flex w-full flex-col items-start">
