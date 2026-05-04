@@ -70,7 +70,7 @@ export const projects: ProjectItem[] = [
       },
       {
         title: "Status",
-        text: "Live - X Monthly Visitors",
+        text: "Live",
       },
       {
         title: "Languages",
